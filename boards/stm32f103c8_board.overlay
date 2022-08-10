@@ -1,0 +1,17 @@
+/*
+ *	Author: Mohd Ramza <mohdramza@yahoo.com>
+ *	SPDX-License-Identifier: Apache-2.0
+ *	DTS FOR CUSTOM STM32F103C8 BOARD (BSP)
+ */
+#include "stm32f103c8_board_peripheral.dtsi"
+#include "stm32f103c8_board_io_master.dtsi"
+
+
+/**** New node additions to root ****/
+/ {
+	chosen {
+		zephyr,console = &usart1; //logging
+		zephyr,shell-uart = &usart1;
+		zephyr,osdp-uart = &usart2;
+	};
+};

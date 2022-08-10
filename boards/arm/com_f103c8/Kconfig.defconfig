@@ -1,0 +1,6 @@
+if BOARD_COM_F103C8
+
+config BOARD
+	default "com_f103c8"
+
+endif # BOARD_COM_F103C8

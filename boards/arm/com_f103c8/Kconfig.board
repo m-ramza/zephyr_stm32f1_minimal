@@ -1,0 +1,3 @@
+config BOARD_COM_H723ZG
+	bool "STM32 Minimum Development Board"
+	depends on SOC_STM32F103X8
