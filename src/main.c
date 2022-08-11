@@ -9,6 +9,7 @@
 #include <zephyr.h>
 #include <kernel.h>
 #include <logging/log.h>
+#include "thread_manager.h"
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_INF);
 
@@ -22,6 +23,8 @@ K_MUTEX_DEFINE(main_thread_mutex);
 void main(void)
 {
 	LOG_INF("Hello. This is Stm32f1 Series Project");
+
+	spawn_application_threads();
 
 	while (1) {
 		/*Lets suspend the thread as it has done its job*/
