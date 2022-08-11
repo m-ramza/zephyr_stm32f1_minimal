@@ -25,6 +25,9 @@ set(INCLUDES)
 target_include_directories(app PRIVATE ${INCLUDES})
 target_sources(app PRIVATE ${SOURCES})
 
+add_subdirectory(src/MANAGER/THREAD_MGR)
+add_subdirectory(src/MANAGER/BLINK_MGR)
+
 # Specific part for documentation sbuild. You should  provide -DBUILD_DOC=1 in CMake call to let it build documentation.
 if(BUILD_DOC)
     include(doc/build_doxygen_documentation.cmake)
