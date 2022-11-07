@@ -21,3 +21,50 @@
 	status = "disabled";
 };
 /* usart end */
+
+/* timer start */
+&timers4 {
+	status = "okay";
+	st,prescaler = <0xFF>;
+
+	// serving timers4 ch1 pwm
+	pwm4ch1: pwmch1 {
+		compatible = "st,stm32-pwm";
+		status = "okay";
+		pinctrl-0 = <&tim4_ch1_pwm_pb6>;
+		pinctrl-names = "default";
+		label = "TIM4_PWM_CH1";
+		#pwm-cells = <3>;
+	};
+
+	// serving timers4 ch2 pwm
+	pwm4ch2: pwmch2 {
+		compatible = "st,stm32-pwm";
+		status = "okay";
+		pinctrl-0 = <&tim4_ch2_pwm_pb7>;
+		pinctrl-names = "default";
+		label = "TIM4_PWM_CH2";
+		#pwm-cells = <3>;
+	};
+
+	// serving timers4 ch3 pwm
+	pwm4ch3: pwmch3 {
+		compatible = "st,stm32-pwm";
+		status = "okay";
+		pinctrl-0 = <&tim4_ch3_pwm_pb8>;
+		pinctrl-names = "default";
+		label = "TIM4_PWM_CH3";
+		#pwm-cells = <3>;
+	};
+
+	// serving timers4 ch4 pwm
+	pwm4ch4: pwmch4 {
+		compatible = "st,stm32-pwm";
+		status = "okay";
+		pinctrl-0 = <&tim4_ch4_pwm_pb9>;
+		pinctrl-names = "default";
+		label = "TIM4_PWM_CH4";
+		#pwm-cells = <3>;
+	};
+};
+/* timer end */
